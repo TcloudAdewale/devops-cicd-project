@@ -30,7 +30,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t tcloudadewale/devops-app:latest .
+          docker build -t tcloudguy/devops-app:latest .
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
@@ -40,7 +40,7 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker push tcloudadewale/devops-app:latest
+          docker push tcloudguy/devops-app:latest
 
   # JOB 2 - DEPLOY (only runs after build-and-test passes)
   deploy:
